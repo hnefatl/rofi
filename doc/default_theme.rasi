@@ -31,33 +31,9 @@
     active-background:           var(background);
     selected-active-background:  var(blue);
 }
-window {
-    background-color: var(background);
-    border:           1;
-    padding:          5;
-}
-mainbox {
-    border:  0;
-    padding: 0;
-}
-message {
-    border:       2px dash 0px 0px ;
-    border-color: var(separatorcolor);
-    padding:      1px ;
-}
-textbox {
-    text-color: var(foreground);
-}
-listview {
-    fixed-height: 0;
-    border:       2px dash 0px 0px ;
-    border-color: var(separatorcolor);
-    spacing:      2px ;
-    scrollbar:    true;
-    padding:      2px 0px 0px ;
-}
 element {
     border:  0;
+    spacing: 5px ;
     padding: 1px ;
 }
 element normal.normal {
@@ -96,6 +72,39 @@ element alternate.active {
     background-color: var(alternate-active-background);
     text-color:       var(alternate-active-foreground);
 }
+element-text {
+    background-color: rgba ( 0, 0, 0, 0 % );
+    text-color:       inherit;
+}
+element-icon {
+    background-color: rgba ( 0, 0, 0, 0 % );
+    text-color:       inherit;
+}
+window {
+    background-color: var(background);
+    border:           1;
+    padding:          5;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       2px dash 0px 0px ;
+    border-color: var(separatorcolor);
+    padding:      1px ;
+}
+textbox {
+    text-color: var(foreground);
+}
+listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    border-color: var(separatorcolor);
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
 scrollbar {
     width:        4px ;
     border:       0;
@@ -103,7 +112,7 @@ scrollbar {
     handle-width: 8px ;
     padding:      0;
 }
-mode-switcher {
+sidebar {
     border:       2px dash 0px 0px ;
     border-color: var(separatorcolor);
 }
@@ -119,7 +128,7 @@ inputbar {
     spacing:    0px ;
     text-color: var(normal-foreground);
     padding:    1px ;
-    children:   [ prompt,textbox-prompt-colon,entry,overlay,case-indicator ];
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:    0;
@@ -138,8 +147,4 @@ textbox-prompt-colon {
     str:        ":";
     margin:     0px 0.3000em 0.0000em 0.0000em ;
     text-color: inherit;
-}
-error-message {
-    background-color: rgba ( 0, 0, 0, 0 % );
-    text-color:       var(normal-foreground);
 }

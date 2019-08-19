@@ -233,6 +233,10 @@ Note: glob matching might be slow for larger lists
 
 Tokenize the input.
 
+`-drun-categories` *category*,*category*
+
+Only show desktop files that are present in the listed categories.
+
 `-drun-match-fields` *field1*,*field2*,...
 
 When using drun, match only with the specified Desktop entry fields.
@@ -657,6 +661,10 @@ such as `-dump`, `-only-match` or `-auto-select`.
 Reads the first 25 entries blocking, then switches to async mode. This makes it feel more 'snappy'.
 
 *default*: 25
+
+`-window-title` *title*
+
+Set name used for the window title. Will be shown as Rofi - *title*
 
 ### Message dialog
 
