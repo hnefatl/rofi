@@ -9,9 +9,8 @@
 }
 #window {
     fullscreen: false;
-    height: 100%;
-    width: 20%;
-    location: northwest;
+    width: 100%;
+    location: north;
 
     font: "Noto Sans Mono 12";
 
@@ -22,7 +21,7 @@
 }
 
 #inputbar {
-    children: [ prompt, entry ];
+    children: [];
 }
 #prompt {
 }
@@ -30,10 +29,9 @@
 }
 
 #listview {
-    fixed-height: true;
-    dynamic: false;
+    fixed-height: false;
+    dynamic: true;
     layout: vertical;
-    lines: 0;
     expand: true;
 }
 
@@ -41,4 +39,3 @@
     text-color: #ffffff;
     background-color: #005577;
 }
-
